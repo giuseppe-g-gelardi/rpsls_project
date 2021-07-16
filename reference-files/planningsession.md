@@ -15,7 +15,6 @@ ALGORITHM:
 8. if not, play another round
 9. when someone has won best of three
 10. display the winner
-11.
 
 CLASSES:
 
