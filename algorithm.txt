@@ -1,0 +1,11 @@
+Step 1: Display the rules of the game -
+Step 2: Ask how many human players will be playing
+step 3: is opponent human or ai 
+step 4: game begins
+step 5: ask user for their input 
+step 6: opponent selects their move 
+step 7: determine winner of first outcome 
+step 8: 2 separate counters for user and opponent
+	counting the total wins (best of 3 format)
+step 9: determine winner 
+step 10: play again?
