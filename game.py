@@ -14,4 +14,5 @@ class Game(User, Opponent):
 
 Game.game_message()
 # TODO add run_game() method
-
+    def game(self, user, opponenet):
+        
