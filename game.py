@@ -1,8 +1,11 @@
-from human import Human
-from ai import Ai
+from user import User
+from opponent import Opponent
 
-test = Human.choice()
-test = Ai('self')
+
+class Game(User, Opponent):
+    def __init__(self):
+        super().__init__(User, Opponent)
+        
 
 # TODO add run_game() method
 
