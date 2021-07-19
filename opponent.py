@@ -24,7 +24,6 @@ test = Opponent('Player 2', Opponent.player_moves)
 
 test = test.choice()
 
-print(test)
 
 
 
