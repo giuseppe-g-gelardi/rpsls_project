@@ -5,19 +5,16 @@ from ai import AI
 
 class Game():
     def __init__(self):
-        self.user = ""
-        #self.opponent = Opponent()
-        # super().__init__(User, Opponent, self.player_moves)
-        # self.user = User()
-        # self.opponent = Opponent()
+        self.player1 = Human()
+        self.plaery2 = AI()
+        super().__init__(self)
+
     
     def game_message(self):
         print('Welcome to rock, paper, scissors, lizard, Spock in a best-of-three format')
-        print(' THE RULES:\n  Rock crushes Scissors\n  Scissors cuts Paper\n Paper covers Rock\n Rock crushes Lizard\n Lizard poisons Spock\n Spock smashes Scissors\n Scissors decapitates Lizard')
+        print(' THE RULES:\n Rock crushes Scissors\n Scissors cuts Paper\n Paper covers Rock\n Rock crushes Lizard\n Lizard poisons Spock\n Spock smashes Scissors\n Scissors decapitates Lizard')
 
     
 
 game = Game()
-message = game.game_message
-
-print(message)
+message = game.game_message()

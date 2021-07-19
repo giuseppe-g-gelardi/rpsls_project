@@ -1,6 +1,5 @@
 from players import Players
 import random
-# TODO develop RNG for opponent moves
 
 
 class AI(Players):
