@@ -8,4 +8,5 @@ class Game(User, Opponent):
         
 
 # TODO add run_game() method
-
+    def game(self, user, opponenet):
+        
