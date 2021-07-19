@@ -17,4 +17,10 @@ class Game():
     
 
 game = Game()
+<<<<<<< HEAD
 message = game.game_message()
+=======
+message = game.game_message
+
+print(message)
+>>>>>>> 6424311ceb5792bb28e9d0ab9ababb83457cf62a
