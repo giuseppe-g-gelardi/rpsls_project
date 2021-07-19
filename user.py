@@ -8,12 +8,6 @@ class User(Players):
         self.player_moves = player_moves
         print("in user class")
 
-
-# User.name = "player1"
-# User(User.name, User.player_moves)
-# print(User.name)
-# print(User.player_moves)
-
     def choice(self):
         self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ')
         if self.choice in self.player_moves:
@@ -25,10 +19,12 @@ class User(Players):
                 # if self.choice in self.player_moves:
                 #     return self.choice
         print(f'your choice was {self.choice} ')
-        
 
-test = User('Player 1', User.player_moves)
 
-test = test.choice()
 
-print(test)
+
+# test = User('Player 1', User.player_moves)
+
+# test = test.choice()
+
+# print(test)
