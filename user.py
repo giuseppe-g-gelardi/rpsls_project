@@ -9,23 +9,26 @@ class User(Players):
         print("in user class")
 
 
-User.name = "player1"
-User(User.name, User.player_moves)
-print(User.name)
-print(User.player_moves)
+# User.name = "player1"
+# User(User.name, User.player_moves)
+# print(User.name)
+# print(User.player_moves)
 
+    def choice(self):
+        self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ')
+        if self.choice in self.player_moves:
+            print(self.choice)
+        else:
+            while self.choice not in self.player_moves:
+                print('sorry invalid choice! Please select rock, scissors, paper, lizard or spock')
+                self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ')
+                # if self.choice in self.player_moves:
+                #     return self.choice
+        print(f'your choice was {self.choice} ')
+        
 
+test = User('Player 1', User.player_moves)
 
-# TODO impliment the following
+test = test.choice()
 
-# self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ').lower()
-# if self.choice in getstures:
-#     print(self.choice)
-# else:
-#     while self.choice not in getstures:
-#         print('sorry invalid choice! Please select rock, scissors, paper, lizzard or spock')
-#         self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ').lower()
-#
-# test = Human('human')
-#
-# test.player_choice()
+print(test)
