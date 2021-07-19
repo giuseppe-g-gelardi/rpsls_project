@@ -14,13 +14,10 @@ class Game():
         print('Welcome to rock, paper, scissors, lizard, Spock in a best-of-three format')
         print(' THE RULES:\n Rock crushes Scissors\n Scissors cuts Paper\n Paper covers Rock\n Rock crushes Lizard\n Lizard poisons Spock\n Spock smashes Scissors\n Scissors decapitates Lizard')
 
-    
+    # def user_vs_ai(self):
 
-game = Game()
-<<<<<<< HEAD
-message = game.game_message()
-=======
-message = game.game_message
 
-print(message)
->>>>>>> 6424311ceb5792bb28e9d0ab9ababb83457cf62a
+
+
+# game = Game()
+# message = game.game_message()
