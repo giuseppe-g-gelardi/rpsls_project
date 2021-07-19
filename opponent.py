@@ -15,5 +15,8 @@ Opponent.name = "AI"
 Opponent(Opponent.name, Opponent.player_moves)
 print(Opponent.name)
 print(Opponent.player_moves)
-opponent_move = random.randint(0, 5)
+opponent_move = random.randint(0, 4)
 print(opponent_move)
+opp_index = random.randint(0, 4)
+opponent_random_move = Opponent.player_moves[opp_index]
+print(opponent_random_move)
