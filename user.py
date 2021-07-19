@@ -15,13 +15,13 @@ class User(Players):
 # print(User.player_moves)
 
     def choice(self):
-        self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ')
+        self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock: ')
         if self.choice in self.player_moves:
             print(self.choice)
         else:
             while self.choice not in self.player_moves:
-                print('sorry invalid choice! Please select rock, scissors, paper, lizard or spock')
-                self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ')
+                print('sorry invalid choice! Please select rock, scissors, paper, lizard or spock: ')
+                self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock: ')
                 # if self.choice in self.player_moves:
                 #     return self.choice
         print(f'your choice was {self.choice} ')
