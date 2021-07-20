@@ -12,7 +12,6 @@ class Game:
     def run_game(self):
         self.game_message()
         self.multiplayer()
-        self.gesture_compare_singleplayer()
         self.outcome()
         self.restart()
 
@@ -59,18 +58,18 @@ class Game:
         if self.player1.score == 3 or self.player2.score == 3:
             if self.player1.score > self.player2.score:
                 print("Player1 has won the game")
-                self.restart()
+                
             else:
                 print("Player2 has won the game")
-                self.restart()
+                
 
 
     def multiplayer(self):
-        self.multiplayer = input("would you like to play multiplayer? yes or no: ").lower()
-        if self.multiplayer == "yes":
+        userInput = input("would you like to play multiplayer? yes or no: ").lower()
+        if userInput == "yes":
             self.player2 = Human(input('hello player2, what is your name?'))
             self.gesture_compare_multiplayer()
-        elif self.multiplayer == 'no':
+        elif userInput == 'no':
             self.gesture_compare_singleplayer()
         else:
             print('invalid input, please type yes or no')
@@ -104,10 +103,13 @@ class Game:
             
 
     def restart(self):
-        self.play_again = input('would you like to play agian? yes or no: ')
+        self.play_again = input('would you like to play agian? yes or no: ').lower()
         if self.play_again == 'yes':
             self.player1.score = 0
             self.player2.score = 0
             self.run_game()
-        else:
+        elif self.play_again == 'no':
             print('thanks for playing!')
+        else:
+            print('invalid input please, choose yes or no!')
+            self.restart()
