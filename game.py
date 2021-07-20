@@ -25,7 +25,7 @@ class Game:
               '\n Spock smashes Scissors'
               '\n Scissors decapitates Lizard')
 
-    # method to compare the gestures
+
     def gesture_compare_singleplayer(self):
         while (self.player1.score < 3 and self.player2.score < 3):
             self.player1.gestures()
@@ -33,7 +33,7 @@ class Game:
             
             if self.player1.choice == self.player2.opponent_random_move:
                     print("tie!, go again!")
-                    # self.gesture_compare_singleplayer()
+       
             elif (self.player1.choice == 'rock' and self.player2.opponent_random_move == 'scissors') or \
                         (self.player1.choice == 'scissors' and self.player2.opponent_random_move == 'paper') or \
                         (self.player1.choice == 'paper' and self.player2.opponent_random_move == 'rock') or \
@@ -54,7 +54,7 @@ class Game:
                     print(f'score is Player 1: {self.player1.score} Player 2: {self.player2.score}')
                 
             
-            # return self.gesture_compare_singleplayer()
+            
 
 
 
@@ -62,18 +62,9 @@ class Game:
         if self.player1.score == 3 or self.player2.score == 3:
             if self.player1.score > self.player2.score:
                 print("Player1 has won the game")
-                play_again = input("yes or no: ")
-                if play_again == "yes":
-                    self.player1.score = 0
-                    self.player2.score = 0
-                    return self.run_game()
             else:
                 print("Player2 has won the game")
-                play_again = input("Would you like to play again? yes or no: ")
-                if play_again == "yes":
-                    self.player1.score = 0
-                    self.player2.score = 0
-                    return self.run_game()
+
 
     def multiplayer(self):
         self.multiplayer = input("would you like to play multiplayer? yes or no: ").lower()
@@ -93,7 +84,7 @@ class Game:
             self.player2.gestures()
             if self.player1.choice == self.player2.choice:
                 print("tie!, go again!")
-                # self.gesture_compare_multiplayer()
+                
             elif (self.player1.choice == 'rock' and self.player2.choice == 'scissors') or \
                     (self.player1.choice == 'scissors' and self.player2.choice == 'paper') or \
                     (self.player1.choice == 'paper' and self.player2.choice == 'rock') or \
@@ -112,4 +103,4 @@ class Game:
                 print(f'{self.player2.choice} beats! {self.player1.choice} player 2 won that round!!')
                 print(f'score is Player 1: {self.player1.score} Player 2: {self.player2.score}')
             
-            # return self.gesture_compare_multiplayer()
+
