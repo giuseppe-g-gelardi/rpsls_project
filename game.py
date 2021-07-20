@@ -10,6 +10,7 @@ class Game:
     def __init__(self):
         self.player1 = Human("bob")
         self.player2 = AI("goblin")
+        self.player3 = Human(input('what is your name?'))
         # super().__init__(self)
 
     def run_game(self):
@@ -64,6 +65,8 @@ class Game:
                 print("Player1 has won the game")
                 play_again = input("yes or no: ")
                 if play_again == "yes":
+                    self.player1.score = 0
+                    self.player2.score = 0
                     return self.run_game()
             else:
                 print("Player2 has won the game")
