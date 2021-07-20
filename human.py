@@ -4,7 +4,8 @@ from players import Players
 class Human(Players):
     def __init__(self, name):
         super().__init__(name)
-        self.name = name
+        self.player1 = name
+        self.player2 = name
 
     def gestures(self):
         self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ').lower()

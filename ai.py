@@ -11,7 +11,7 @@ class AI(Players):
     def AI(self):
         self.computer = AI('Mr Robot')
 
-    def choice(self):
+    def computer_choice(self):
         self.opponent_move = random.randint(0, 4)
         
         self.opponent_random_move = self.player_moves[self.opponent_move]
