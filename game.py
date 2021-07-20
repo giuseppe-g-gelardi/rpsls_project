@@ -9,7 +9,7 @@ from ai import AI
 class Game:
     def __init__(self):
         self.player1 = Human(input('hello player1, what is your name?'))
-        self.player2 = AI("goblin")
+        self.player2 = AI("opponent")
         # super().__init__(self)
 
     def run_game(self):
@@ -81,4 +81,7 @@ class Game:
         if self.multiplayer == "yes":
             self.player2 = Human(input('hello player2, what is your name?'))
             self.gesture_compare()
-                
+        else:
+            self.player2 = AI("opponent")
+            self.gesture_compare()
+                           
