@@ -34,18 +34,19 @@ class Game:
         self.player2.choice()
         while (self.player1.score or self.player2.score) < 3:
             
-            if self.player1.choice == self.player2.choice:
+            if self.player1.gestures == self.player2.choice:
                 print("tie!, go again!")
-            if (self.player1.choice == 'rock' and self.player2.choice == 'scissors') or \
-                    (self.player1.choice == 'scissors' and self.player2.choice == 'paper') or \
-                    (self.player1.choice == 'paper' and self.player2.choice == 'rock') or \
-                    (self.player1.choice == 'rock' and self.player2.choice == 'lizard') or \
-                    (self.player1.choice == 'lizard' and self.player2.choice == 'spock') or \
-                    (self.player1.choice == 'spock' and self.player2.choice == 'scissors') or \
-                    (self.player1.choice == 'lizard' and self.player2.choice == 'paper') or \
-                    (self.player1.choice == 'paper' and self.player2.choice == 'spock') or \
-                    (self.player1.choice == 'spock' and self.player2.choice == 'rock') or \
-                    (self.player1.choice == 'scissors' and self.player2.choice == 'lizard'):
+                return False
+            if (self.player1.gestures == 'rock' and self.player2.choice == 'scissors') or \
+                    (self.player1.gestures == 'scissors' and self.player2.choice == 'paper') or \
+                    (self.player1.gestures == 'paper' and self.player2.choice == 'rock') or \
+                    (self.player1.gestures == 'rock' and self.player2.choice == 'lizard') or \
+                    (self.player1.gestures == 'lizard' and self.player2.choice == 'spock') or \
+                    (self.player1.gestures == 'spock' and self.player2.choice == 'scissors') or \
+                    (self.player1.gestures == 'lizard' and self.player2.choice == 'paper') or \
+                    (self.player1.gestures == 'paper' and self.player2.choice == 'spock') or \
+                    (self.player1.gestures == 'spock' and self.player2.choice == 'rock') or \
+                    (self.player1.gestures == 'scissors' and self.player2.choice == 'lizard'):
                 self.player1.score += 1
             else:
                 self.player2.score += 1
@@ -63,6 +64,6 @@ class Game:
                     return self.run_game()
             else:
                 print("Player2 has won the game")
-                play_again = input("yes or no: ")
+                play_again = input("Would you like to play again? yes or no: ")
                 if play_again == "yes":
                     return self.run_game()
