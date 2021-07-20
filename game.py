@@ -89,6 +89,9 @@ class Game:
         self.player1.gestures()
         self.player2.gestures()
         while (self.player1.score < 3 and self.player2.score < 3):
+            if self.player1.score == 3 or self.player2.score == 3:
+                break
+                #self.outcome
             if self.player1.choice == self.player2.choice:
                 print("tie!, go again!")
                 self.gesture_compare_multiplayer()
