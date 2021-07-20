@@ -13,7 +13,6 @@ class Game:
         # super().__init__(self)
 
     def run_game(self):
-        print("get ready to play RPSLS!!111 omegalulz")
         self.game_message()
         self.gesture_compare()
         self.outcome()
@@ -34,19 +33,19 @@ class Game:
         self.player2.choice()
         while (self.player1.score or self.player2.score) < 3:
             
-            if self.player1.gestures == self.player2.choice:
+            if self.player1.choice == self.player2.opponent_random_move:
                 print("tie!, go again!")
                 return False
-            if (self.player1.gestures == 'rock' and self.player2.choice == 'scissors') or \
-                    (self.player1.gestures == 'scissors' and self.player2.choice == 'paper') or \
-                    (self.player1.gestures == 'paper' and self.player2.choice == 'rock') or \
-                    (self.player1.gestures == 'rock' and self.player2.choice == 'lizard') or \
-                    (self.player1.gestures == 'lizard' and self.player2.choice == 'spock') or \
-                    (self.player1.gestures == 'spock' and self.player2.choice == 'scissors') or \
-                    (self.player1.gestures == 'lizard' and self.player2.choice == 'paper') or \
-                    (self.player1.gestures == 'paper' and self.player2.choice == 'spock') or \
-                    (self.player1.gestures == 'spock' and self.player2.choice == 'rock') or \
-                    (self.player1.gestures == 'scissors' and self.player2.choice == 'lizard'):
+            if (self.player1.choice == 'rock' and self.player2.opponent_random_move == 'scissors') or \
+                    (self.player1.choice == 'scissors' and self.player2.opponent_random_move == 'paper') or \
+                    (self.player1.choice == 'paper' and self.player2.opponent_random_move == 'rock') or \
+                    (self.player1.choice == 'rock' and self.player2.opponent_random_move == 'lizard') or \
+                    (self.player1.choice == 'lizard' and self.player2.opponent_random_move == 'spock') or \
+                    (self.player1.choice == 'spock' and self.player2.opponent_random_move == 'scissors') or \
+                    (self.player1.choice == 'lizard' and self.player2.opponent_random_move == 'paper') or \
+                    (self.player1.choice == 'paper' and self.player2.opponent_random_move == 'spock') or \
+                    (self.player1.choice == 'spock' and self.player2.opponent_random_move == 'rock') or \
+                    (self.player1.choice == 'scissors' and self.player2.opponent_random_move == 'lizard'):
                 self.player1.score += 1
             else:
                 self.player2.score += 1
