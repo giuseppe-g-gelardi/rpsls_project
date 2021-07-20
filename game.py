@@ -30,7 +30,7 @@ class Game:
     def gesture_compare(self):
         self.player1.gestures()
         self.player2.choice()
-        while (self.player1.score < 2 and self.player2.score < 2):
+        while (self.player1.score < 3 and self.player2.score < 3):
             
             if self.player1.choice == self.player2.opponent_random_move:
                 print("tie!, go again!")
@@ -58,7 +58,7 @@ class Game:
 
 
     def outcome(self):
-        if self.player1.score or self.player2.score == 3:
+        if (self.player1.score == 3) or (self.player2.score == 3):
             if self.player1.score > self.player2.score:
                 print("Player1 has won the game")
                 play_again = input("yes or no: ")
