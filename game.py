@@ -3,18 +3,16 @@ from human import Human
 from ai import AI
 
 
-#  TODO: this is similar to how the battlefield was in robots vs dinosaurs
-
 
 class Game:
     def __init__(self):
-        self.player1 = Human(input('Player 1, what is your name?'))
+        self.player1 = Human(input('hello player1, what is your name?  '))
         self.player2 = AI("goblin")
-        self.player3 = Human(input('Player 2, what is your name?'))
         # super().__init__(self)
 
     def run_game(self):
         self.game_message()
+        self.multi_player()
         self.gesture_compare()
         self.outcome()
 
@@ -32,7 +30,7 @@ class Game:
     def gesture_compare(self):
         self.player1.gestures()
         self.player2.choice()
-        while (self.player1.score or self.player2.score) < 3:
+        while (self.player1.score < 2 and self.player2.score < 2):
             
             if self.player1.choice == self.player2.opponent_random_move:
                 print("tie!, go again!")
@@ -75,3 +73,16 @@ class Game:
                     self.player1.score = 0
                     self.player2.score = 0
                     return self.run_game()
+
+    def multi_player(self):
+        self.multiplayer = input("would you like to play multiplayer? yes or no: ").lower()
+        if self.multiplayer == "yes":
+            self.player2 = Human(input('hello player2, what is your name?'))
+            self.gesture_compare()
+        elif self.multiplayer == 'no':
+            self.gesture_compare()
+        else:
+            print('invalid input, please type yes or no')
+            self.multi_player()
+
+                
