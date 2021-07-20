@@ -19,9 +19,9 @@ class AI(Players):
         print(f'AI picked {self.opponent_random_move}')
 
 
-test = AI('robot')
+# test = AI('robot')
 
-test = test.choice()
+# test = test.choice()
 
 
 

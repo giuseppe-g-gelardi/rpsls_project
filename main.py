@@ -1,5 +1,8 @@
+from ai import AI
+from players import Players
 from game import Game
 
-Game().game_message()
-# game = Game()
-# game.run_game()
+
+game = Game()
+
+game.run_game()

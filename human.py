@@ -19,8 +19,7 @@ class Human(Players):
         return self.choice
 
 
-test = Human('Player 1')
+# test = Human('Player 1')
 
-test1 = test.gestures()
+# test1 = test.gestures()
 
-print(test1)
