@@ -8,12 +8,12 @@ from ai import AI
 
 class Game:
     def __init__(self):
-        self.player1 = Human("bob")
+        self.player1 = Human(input('hello player1, what is your name?'))
         self.player2 = AI("goblin")
-        self.player3 = Human(input('what is your name?'))
         # super().__init__(self)
 
     def run_game(self):
+        self.multi_player()
         self.game_message()
         self.gesture_compare()
         self.outcome()
@@ -75,3 +75,10 @@ class Game:
                     self.player1.score = 0
                     self.player2.score = 0
                     return self.run_game()
+
+    def multi_player(self):
+        self.multiplayer = input("would you like to play multiplayer? yes or no: ")
+        if self.multiplayer == "yes":
+            self.player2 = Human(input('hello player2, what is your name?'))
+            self.gesture_compare()
+                
