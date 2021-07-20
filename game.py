@@ -8,9 +8,9 @@ from ai import AI
 
 class Game:
     def __init__(self):
-        self.player1 = Human("bob")
+        self.player1 = Human(input('Player 1, what is your name?'))
         self.player2 = AI("goblin")
-        self.player3 = Human(input('what is your name?'))
+        self.player3 = Human(input('Player 2, what is your name?'))
         # super().__init__(self)
 
     def run_game(self):
