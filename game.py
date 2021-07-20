@@ -14,6 +14,7 @@ class Game:
         self.multiplayer()
         self.gesture_compare_singleplayer()
         self.outcome()
+        self.restart()
 
     def game_message(self):
         print('Welcome to rock, paper, scissors, lizard, Spock in a best-of-three format')
@@ -52,18 +53,16 @@ class Game:
                     self.player2.score += 1
                     print(f'{self.player2.opponent_random_move} beats! {self.player1.choice} player 2 won that round!!')
                     print(f'score is Player 1: {self.player1.score} Player 2: {self.player2.score}')
-                
-            
-            
-
 
 
     def outcome(self):
         if self.player1.score == 3 or self.player2.score == 3:
             if self.player1.score > self.player2.score:
                 print("Player1 has won the game")
+                self.restart()
             else:
                 print("Player2 has won the game")
+                self.restart()
 
 
     def multiplayer(self):
@@ -104,3 +103,11 @@ class Game:
                 print(f'score is Player 1: {self.player1.score} Player 2: {self.player2.score}')
             
 
+    def restart(self):
+        self.play_again = input('would you like to play agian? yes or no: ')
+        if self.play_again == 'yes':
+            self.player1.score = 0
+            self.player2.score = 0
+            self.run_game()
+        else:
+            print('thanks for playing!')
