@@ -16,7 +16,7 @@ class Human(Players):
                 self.choice = input('Please choose: rock, paper, scissors, lizard, or Spock ').lower()
 
         print(f'your choice was {self.choice} ')
-        return self.choice
+        # return self.choice
 
 
 # test = Human('Player 1')

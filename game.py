@@ -35,7 +35,7 @@ class Game:
             
             if self.player1.choice == self.player2.opponent_random_move:
                 print("tie!, go again!")
-                return False
+                self.gesture_compare()
             if (self.player1.choice == 'rock' and self.player2.opponent_random_move == 'scissors') or \
                     (self.player1.choice == 'scissors' and self.player2.opponent_random_move == 'paper') or \
                     (self.player1.choice == 'paper' and self.player2.opponent_random_move == 'rock') or \
@@ -47,8 +47,12 @@ class Game:
                     (self.player1.choice == 'spock' and self.player2.opponent_random_move == 'rock') or \
                     (self.player1.choice == 'scissors' and self.player2.opponent_random_move == 'lizard'):
                 self.player1.score += 1
+                print(f'{self.player1.choice} beats! {self.player2.opponent_random_move} player 1 won that round!!')
+                print(f'score is Player 1: {self.player1.score} Player 2: {self.player2.score}')
             else:
                 self.player2.score += 1
+                print(f'{self.player2.opponent_random_move} beats! {self.player1.choice} player 2 won that round!!')
+                print(f'score is Player 1: {self.player1.score} Player 2: {self.player2.score}')
             
             return self.gesture_compare()
 
@@ -65,4 +69,6 @@ class Game:
                 print("Player2 has won the game")
                 play_again = input("Would you like to play again? yes or no: ")
                 if play_again == "yes":
+                    self.player1.score = 0
+                    self.player2.score = 0
                     return self.run_game()
